@@ -1,4 +1,4 @@
-name: CI Build auth
+name: CI Build Ruoyi-auth
 
 on:
   push:
