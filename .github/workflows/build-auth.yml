@@ -44,4 +44,5 @@ jobs:
       run: |
         sudo echo "${aliyun_password}" | docker login --username=${aliyun_username} registry.cn-shenzhen.aliyuncs.com --password-stdin
         sudo docker tag ${{ matrix.image-name }}:${{ matrix.image-version }} registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
+        
         sudo docker push registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
