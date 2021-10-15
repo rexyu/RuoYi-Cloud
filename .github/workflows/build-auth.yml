@@ -7,7 +7,6 @@ on:
     paths:
       - '**/build-auth.yml'
 
-
 jobs:
   build:
 
