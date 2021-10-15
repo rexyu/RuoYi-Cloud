@@ -34,6 +34,7 @@ jobs:
       
     - name: docker build
       run: |
+        cd docker/
         sudo docker build -t ${{ matrix.image-name }}:${{ matrix.image-version }} .
 
       
