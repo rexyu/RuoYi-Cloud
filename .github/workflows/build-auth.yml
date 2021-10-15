@@ -26,7 +26,7 @@ jobs:
         aliyun_password: ${{ secrets.ALIYUN_PASSWORD}}
       run: |
         sudo docker images
-        sudo docker tag ubuntu:18.04  registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
+        sudo docker tag ubuntu:20.04  registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
         sudo docker images
         sudo echo "${aliyun_password}" | docker login --username=${aliyun_username} registry.cn-shenzhen.aliyuncs.com --password-stdin 
-        docker push registry.cn-shenzhen.aliyuncs.com/devdev/ruoyi-auth:v1.0
+        docker push registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
