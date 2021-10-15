@@ -40,9 +40,9 @@ jobs:
       
     - name: push aliyun
       env:
-        aliyun_username: ${{ secrets.Aliyun_Username }}
+        aliyun_username: ${{ secrets.ALIYUN_USERNAME}}
         aliyun_password: ${{ secrets.Aliyun_Password }}
       run: |
-        sudo docker login --username=${aliyun_username} registry.cn-shenzhen.aliyuncs.com --password=${{ secrets.aliyun_password }}
+        sudo docker login --username=${aliyun_username} registry.cn-shenzhen.aliyuncs.com --password=${aliyun_password }
         sudo docker tag ${{ matrix.image-name }}:${{ matrix.image-version }} registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
         sudo docker push registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
