@@ -1,17 +1,12 @@
 name: CI Build auth
 
 on:
-  release:
-    types: [published]
   push:
     branches:
       - master
     paths:
       - '**/build-auth.yml'
-#  schedule:
-#    - cron: 0 8 * * 5
-#  watch:
-#    types: [started]
+
 
 jobs:
   build:
