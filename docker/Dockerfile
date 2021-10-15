@@ -1,4 +1,4 @@
-FROM  openjdk:8-jdk
+FROM  openjdk:8-jdk-alpine
 LABEL MAINTAINER ruoyi
 
 ENV PARAMS=" --server.port=8080 --spring.profiles.active=prod --spring.cloud.nacos.server-addr=nacos.common"
