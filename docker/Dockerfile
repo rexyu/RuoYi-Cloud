@@ -1,7 +1,7 @@
 FROM  openjdk:8-jdk
 LABEL MAINTAINER ruoyi
 
-ENV PARAMS=" --server.port=8080 --springprofiles.active=prod --spring.cloud.nacos.server-addr=nacos.common"
+ENV PARAMS=" --server.port=8080 --spring.profiles.active=prod --spring.cloud.nacos.server-addr=nacos.common"
 
 COPY target/*.jar /app.jar
 EXPOSE 8080
