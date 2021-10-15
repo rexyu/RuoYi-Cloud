@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         image-name: [ruoyi-auth]
-        image-version: [v1.0]
+        image-version: [v1.1]
 
 
     steps:
@@ -43,7 +43,7 @@ jobs:
         aliyun_password: ${{ secrets.ALIYUN_PASSWORD}}
       run: |
         sudo docker images
-        sudo docker tag buildpack-deps:bullseye  registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
+        sudo docker tag ${{ matrix.image-name }}:${{ matrix.image-version }}  registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
         sudo docker images
         sudo echo "${aliyun_password}" | docker login --username=${aliyun_username} registry.cn-shenzhen.aliyuncs.com --password-stdin 
         docker push registry.cn-shenzhen.aliyuncs.com/devdev/${{ matrix.image-name }}:${{ matrix.image-version }}
