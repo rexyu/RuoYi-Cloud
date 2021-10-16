@@ -6,4 +6,4 @@ ENV PARAMS=" --server.port=8080 --spring.profiles.active=prod --spring.cloud.nac
 COPY target/*.jar /app.jar
 EXPOSE 8080
 
-ENTRYPOINT ["/bin/sh","-c","java  -Dfile.encoding=urf8 -Djava.security.egd=file:/dev/./urandom","-jar","/app.jar" ,"${PARAMS}"]
+ENTRYPOINT ["/bin/sh","-c","java  -Dfile.encoding=urf8 -Djava.security.egd=file:/dev/./urandom -jar /app.jar ${PARAMS}"]
