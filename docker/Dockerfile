@@ -1,7 +1,7 @@
 FROM  openjdk:8-jdk-alpine
-LABEL MAINTAINER ruoyi
+LABEL MAINTAINER RexYu
 
-ENV PARAMS=" --server.port=8080 --spring.profiles.active=prod --spring.cloud.nacos.server-addr=nacos.common:9848  --spring.cloud.nacos.discovery.server-addr=nacos.common:9848 --spring.cloud.nacos.config.server-addr=nacos.common:9848"
+ENV PARAMS=" --server.port=8080 --spring.profiles.active=prod --spring.cloud.nacos.server-addr=nacos.common:9848  --spring.cloud.nacos.discovery.server-addr=nacos.common:9848 --spring.cloud.nacos.config.server-addr=nacos.common:9848 --spring.cloud.nacos.discovery.namespace=prod --spring.cloud.nacos.config.namespace=prod"
 
 COPY target/*.jar /app.jar
 EXPOSE 8080
