@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         image-name: [ruoyi-auth]
-        image-version: [v1.4]
+        image-version: [v1.5]
 
 
     steps:
