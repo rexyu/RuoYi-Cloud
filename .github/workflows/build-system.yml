@@ -28,7 +28,7 @@ jobs:
         
     - name: Copy jar 
       run: |
-        cp -rf ./ruoyi-modules/ruoyi-system/target/ruoyi-system.jar ./docker/target/
+        cp -rf ./ruoyi-modules/ruoyi-system/target/ruoyi-modules-system.jar ./docker/target/
       
     - name: docker build
       run: |
