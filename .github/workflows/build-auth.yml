@@ -30,7 +30,6 @@ jobs:
       run: |
         cp -rf ./ruoyi-auth/target/ruoyi-auth.jar ./docker/target/
       
-      
     - name: docker build
       run: |
         cd docker/
