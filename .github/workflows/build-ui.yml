@@ -25,10 +25,13 @@ jobs:
         node-version: 10
         registry-url: https://registry.npmjs.org/
    
-    - name: Build install 
+    - name: Npm install 
       run: |
         cd ./ruoyi-ui
         sudo npm install 
+
+    - name: Build prod 
+      run: |
         sudo npm build:prod
         ls
         cd ..
