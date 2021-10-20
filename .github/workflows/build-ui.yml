@@ -39,8 +39,8 @@ jobs:
         
     - name: Copy html 
       run: |
-        cp -rf ./ruoyi-ui/dest/ ./docker/nginx/html/
-        ls ./docker/nginx/html/dest
+        cp -rf ./ruoyi-ui/dist/ ./docker/nginx/html/
+        ls ./docker/nginx/html/dist
       
     - name: docker build
       run: |
