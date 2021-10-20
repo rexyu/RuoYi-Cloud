@@ -32,7 +32,7 @@ jobs:
 
     - name: Build prod 
       run: |
-        sudo npm build:prod
+        sudo npm run build:prod
         ls
         cd ..
         
